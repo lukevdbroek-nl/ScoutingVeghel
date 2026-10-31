@@ -10,3 +10,19 @@
   --home-card-radius: 18px 6px 18px 6px;
   --home-card-shadow: 0 4px 0 #283a2e0a, 0 8px 24px #283a2e08;
 }
+
+* {
+  scroll-behavior: smooth;
+}
+
+/* Global styles for svg coloring */
+.logo svg {
+  display: block;
+  width: auto;
+  height: 100%;
+  padding-bottom: 8px;
+}
+
+.figure-color-paper {
+    color: var(--home-paper);
+}

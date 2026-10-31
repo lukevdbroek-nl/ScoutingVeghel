@@ -40,13 +40,6 @@ function setMenuOpen(open) {
   menuButton.classList.toggle('hb-menu-btn-open', open);
   menuButton.setAttribute('aria-expanded', String(open));
   menuButton.setAttribute('aria-label', open ? 'Menu sluiten' : 'Menu openen');
-  if (open && !navigation.classList.contains('nav-sticky-top')) {
-    window.scrollTo(
-      0,
-      Math.max(0, navigationStart.getBoundingClientRect().top + window.pageYOffset),
-    );
-    requestNavigationUpdate();
-  }
 }
 
 menuButton.addEventListener('click', () =>

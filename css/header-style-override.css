@@ -1,0 +1,31 @@
+/* Header fade-in na 100vh scrollen (header-function.js). Onderaan home.css plakken. */
+html.header-fade #navigatie {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: auto;
+  z-index: 1000;
+  opacity: 0;
+  transform: translateY(-0.75rem);
+  pointer-events: none;
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease;
+}
+html.header-fade #navigatie.header-visible,
+html.header-fade #navigatie:focus-within {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+@media (prefers-reduced-motion: reduce) {
+  html.header-fade #navigatie {
+    transform: none;
+    transition: opacity 0.2s ease;
+  }
+}
+/* Laatste regel: geen animatie tijdens de eerste meting bij het laden. */
+html.header-no-anim #navigatie {
+  transition: none;
+}

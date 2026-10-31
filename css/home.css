@@ -654,8 +654,8 @@ html {
 /* Keep the starting point stable when Chrome's address bar changes height. */
 #home-navigation-start,
 #navigatie {
-  top: calc(100vh - 3rem);
-  top: calc(100svh - 3rem);
+  top: 0;
+  position: sticky;
 }
 #home-navigation-start {
   position: absolute;
